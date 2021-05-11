@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		98011AF52649353D0069F4FE /* NewsApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98011AF42649353D0069F4FE /* NewsApi.swift */; };
+		9801C45B264B042100DE720F /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9801C45A264B042100DE720F /* Response.swift */; };
 		980A2C4D26360A84008ED4BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980A2C4C26360A84008ED4BB /* AppDelegate.swift */; };
 		980A2C4F26360A84008ED4BB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980A2C4E26360A84008ED4BB /* SceneDelegate.swift */; };
 		980A2C5426360A84008ED4BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 980A2C5226360A84008ED4BB /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		98011AF42649353D0069F4FE /* NewsApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApi.swift; sourceTree = "<group>"; };
+		9801C45A264B042100DE720F /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		980A2C4926360A84008ED4BB /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		980A2C4C26360A84008ED4BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		980A2C4E26360A84008ED4BB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				980A2C6B26368D36008ED4BB /* Article.swift */,
+				9801C45A264B042100DE720F /* Response.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				980A2C6C26368D36008ED4BB /* Article.swift in Sources */,
 				980A2C4D26360A84008ED4BB /* AppDelegate.swift in Sources */,
 				980A2C7B26369610008ED4BB /* NewsTableViewController.swift in Sources */,
+				9801C45B264B042100DE720F /* Response.swift in Sources */,
 				980A2C4F26360A84008ED4BB /* SceneDelegate.swift in Sources */,
 				987A45A126381EEF00338005 /* ArticleCell.swift in Sources */,
 				980A2C7426368F08008ED4BB /* MockAPI.swift in Sources */,
