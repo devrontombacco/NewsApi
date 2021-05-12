@@ -18,5 +18,8 @@ class Article: Object, Codable {
     @objc dynamic var author: String = ""
     @objc dynamic var image: String = ""
     @objc dynamic var date: Date = Date()
-
+    
+    override static func primaryKey() -> String? {
+        "id"
+    }
 }
