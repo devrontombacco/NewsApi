@@ -79,7 +79,6 @@
 				980A2C7626368F2D008ED4BB /* API */,
 				987A45A326381EFA00338005 /* ViewControllers */,
 				980A2C4C26360A84008ED4BB /* AppDelegate.swift */,
-				98011AF42649353D0069F4FE /* NewsApi.swift */,
 				980A2C4E26360A84008ED4BB /* SceneDelegate.swift */,
 				980A2C5226360A84008ED4BB /* Main.storyboard */,
 				980A2C5526360A87008ED4BB /* Assets.xcassets */,
@@ -103,6 +102,7 @@
 			children = (
 				980A2C6F26368E3D008ED4BB /* API.swift */,
 				980A2C7326368F08008ED4BB /* MockAPI.swift */,
+				98011AF42649353D0069F4FE /* NewsApi.swift */,
 				980A2C6E26368D69008ED4BB /* Models */,
 			);
 			path = API;

@@ -32,11 +32,20 @@ class NewsAPI: API{
                 return
             }
             
-            if let json = try? JSONSerialization.jsonObject(with: data!, options: []) {
-                print(json)
+            do {
+                let decoder = JSONDecoder()
+                decoder.dateDecodingStrategy = .iso8601
+                
+                let response = try decoder.decode(Response.self, from: data!)
+                
+                for article in response.articles {
+                    print(article.title)
+                }
+                
+            } catch {
+                print("*** JSON ERROR *** \(error.localizedDescription)")
+                return
             }
-            
-            
             
             
         }

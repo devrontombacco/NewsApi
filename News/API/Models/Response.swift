@@ -9,4 +9,8 @@ import Foundation
 
 struct Response: Codable {
     
+    var count: Int = 0
+    var urls: [String: String] = [String: String]()
+    var articles:[Article] = [Article]()
+    
 }
