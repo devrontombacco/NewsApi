@@ -6,19 +6,23 @@
 //
 
 import UIKit
+import RealmSwift
 
 class NewsTableViewController: UITableViewController {
 
     // A reference to the API, that's used to get news articles
     var api: API
 
-    
-    // An array with articles, that are shown in the TBVC
-    var articles = [Article]()
+    // articles is a Result type, containing an array of Article
+    var articles: Results<Article> {
+        try! Realm().objects(Article.self).sorted(byKeyPath: "date", ascending: false)
+    }
     
     required init?(coder: NSCoder) {
+        
         api = NewsAPI()
         super.init(coder: coder)
+        
     }
     
     override func viewDidLoad() {
@@ -26,7 +30,7 @@ class NewsTableViewController: UITableViewController {
         
         title = "News"
         api.getArticles {
-            // Do nothing...
+            self.tableView.reloadData()
         }
         
     }
