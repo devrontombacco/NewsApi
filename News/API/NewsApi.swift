@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 class NewsAPI: API{
     
@@ -32,6 +33,9 @@ class NewsAPI: API{
                 return
             }
             
+            let realm = try! Realm()
+            realm.beginWrite()
+            
             do {
                 let decoder = JSONDecoder()
                 decoder.dateDecodingStrategy = .iso8601
@@ -39,7 +43,7 @@ class NewsAPI: API{
                 let response = try decoder.decode(Response.self, from: data!)
                 
                 for article in response.articles {
-                    print(article.title)
+                    realm.add(article, update: .modified)
                 }
                 
             } catch {
@@ -47,6 +51,15 @@ class NewsAPI: API{
                 return
             }
             
+            do {
+                try realm.commitWrite()
+            } catch (let error) {
+                print("Y U NO REALM ? \(error)")
+            }
+            
+            DispatchQueue.main.async {
+                completionHandler()
+            }
             
         }
         task.resume()
